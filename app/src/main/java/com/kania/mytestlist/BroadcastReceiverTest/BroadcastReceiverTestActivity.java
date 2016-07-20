@@ -99,9 +99,11 @@ public class BroadcastReceiverTestActivity extends AppCompatActivity {
     private void sendReply(boolean isGranted) {
         Intent replyIntent = new Intent(Constants.ACTION_AVAIL_PERMISSION);
         replyIntent.putExtra(Constants.EXTRA_REQUEST_CODE, Constants.REQUEST_CODE_ALL_PERMISSION);
-        replyIntent.putExtra(Constants.EXTRA_REQUEST_RESULT,
-                isGranted ? Constants.PERMISSION_AVAIL : Constants.PERMISSION_NOT_AVAIL);
+        int result = isGranted ? Constants.PERMISSION_AVAIL : Constants.PERMISSION_NOT_AVAIL;
+        replyIntent.putExtra(Constants.EXTRA_REQUEST_RESULT, result);
         sendBroadcast(replyIntent);
+        Log.d(TAG, "sendReply()! result = " + result);
+        finish();
     }
 
     @Override
