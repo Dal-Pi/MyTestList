@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.kania.mytestlist">
+    package="com.kania.mytestlist">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -10,24 +12,32 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".DialogFragmentTest.DialogFragmentTestActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Tempet.TempletActivity">
-        </activity>
-        <activity android:name=".ThemeColorTest.ThemeColorTestActivity">
-        </activity>
-        <activity android:name=".RunningAppTest.RunningAppTestActivity">
-        </activity>
+        <activity android:name=".Tempet.TempletActivity"></activity>
+        <activity android:name=".ThemeColorTest.ThemeColorTestActivity"></activity>
+        <activity android:name=".RunningAppTest.RunningAppTestActivity"></activity>
+        <activity android:name=".BroadcastReceiverTest.BroadcastReceiverTestActivity"
+            android:launchMode="singleTask"></activity>
+
+        <receiver
+            android:name=".BroadcastReceiverTest.MyTestReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lge.exchange.action.CHECK_PERMISSIONS"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

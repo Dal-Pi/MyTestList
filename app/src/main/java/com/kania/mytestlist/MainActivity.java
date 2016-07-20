@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.kania.mytestlist.BroadcastReceiverTest.BroadcastReceiverTestActivity;
 import com.kania.mytestlist.DialogFragmentTest.DialogFragmentTestActivity;
 import com.kania.mytestlist.RunningAppTest.RunningAppTestActivity;
 import com.kania.mytestlist.Tempet.TempletActivity;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mActivityClassMap = new HashMap<>();
 
         //TODO Make item here
+        setTestItem("4. BroadcastReceiver Test", BroadcastReceiverTestActivity.class);
         setTestItem("3. Running App Test", RunningAppTestActivity.class);
         setTestItem("2. Theme Color Test", ThemeColorTestActivity.class);
         setTestItem("1. Dialog Fargment Test", DialogFragmentTestActivity.class);
