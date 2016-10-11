@@ -40,7 +40,7 @@ public class MyDialogFragment extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.d(MainActivity.APP_TAG, "MyDialogFragment.onCreate()");
+        Log.d(MainActivity.APP_TAG, "MultiWindowDialogFragment.onCreate()");
 
         if (savedInstanceState != null) {
             Log.d(MainActivity.APP_TAG, "restore state");

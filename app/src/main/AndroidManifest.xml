@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kania.mytestlist">
 
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -24,20 +24,24 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Tempet.TempletActivity"></activity>
-        <activity android:name=".ThemeColorTest.ThemeColorTestActivity"></activity>
-        <activity android:name=".RunningAppTest.RunningAppTestActivity"></activity>
-        <activity android:name=".BroadcastReceiverTest.BroadcastReceiverTestActivity"
-            android:launchMode="singleTask"></activity>
+        <activity android:name=".Tempet.TempletActivity" />
+        <activity android:name=".ThemeColorTest.ThemeColorTestActivity" />
+        <activity android:name=".RunningAppTest.RunningAppTestActivity" />
+        <activity
+            android:name=".BroadcastReceiverTest.BroadcastReceiverTestActivity"
+            android:launchMode="singleTask" />
 
         <receiver
             android:name=".BroadcastReceiverTest.MyTestReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.lge.exchange.action.CHECK_PERMISSIONS"/>
+                <action android:name="com.lge.exchange.action.CHECK_PERMISSIONS" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".MultiWindowTest.MultiWindowTestActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"></activity>
     </application>
 
 </manifest>
