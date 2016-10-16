@@ -40,8 +40,10 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".MultiWindowTest.MultiWindowTestActivity"
-            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"></activity>
+        <activity
+            android:name=".MultiWindowTest.MultiWindowTestActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" />
+        <activity android:name=".HandlerTest.HandlerTestActivity"></activity>
     </application>
 
 </manifest>

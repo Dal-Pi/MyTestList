@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.kania.mytestlist.BroadcastReceiverTest.BroadcastReceiverTestActivity;
 import com.kania.mytestlist.DialogFragmentTest.DialogFragmentTestActivity;
+import com.kania.mytestlist.HandlerTest.HandlerTestActivity;
 import com.kania.mytestlist.MultiWindowTest.MultiWindowTestActivity;
 import com.kania.mytestlist.RunningAppTest.RunningAppTestActivity;
 import com.kania.mytestlist.Tempet.TempletActivity;
@@ -18,6 +19,7 @@ import com.kania.mytestlist.ThemeColorTest.ThemeColorTestActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.logging.Handler;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mActivityClassMap = new HashMap<>();
 
         //TODO Make item here
+        setTestItem("6. Handler Test", HandlerTestActivity.class);
         setTestItem("5. MultiWindow Test", MultiWindowTestActivity.class);
         setTestItem("4. BroadcastReceiver Test", BroadcastReceiverTestActivity.class);
         setTestItem("3. Running App Test", RunningAppTestActivity.class);
