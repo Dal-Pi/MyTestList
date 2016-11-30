@@ -43,7 +43,8 @@
         <activity
             android:name=".MultiWindowTest.MultiWindowTestActivity"
             android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" />
-        <activity android:name=".HandlerTest.HandlerTestActivity"></activity>
+        <activity android:name=".HandlerTest.HandlerTestActivity" />
+        <activity android:name=".ListViewTest.ListViewTestActivity"></activity>
     </application>
 
 </manifest>
